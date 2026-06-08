@@ -55,7 +55,7 @@ class _SubtractAmountScreenState extends State<SubtractAmountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent, // Set to transparent
+      backgroundColor: Colors.transparent,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -64,8 +64,8 @@ class _SubtractAmountScreenState extends State<SubtractAmountScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF800020), // Burgundy
-              Color(0xFF2C2C2C), // Charcoal Grey
+              Color(0xFF800020),
+              Color(0xFF2C2C2C),
             ],
           ),
         ),

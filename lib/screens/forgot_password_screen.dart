@@ -29,7 +29,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
       if (savedEmail == null || inputEmail != savedEmail) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text('Email address not found or unregistered.'),
             backgroundColor: Colors.redAccent,
           ),

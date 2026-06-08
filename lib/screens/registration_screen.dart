@@ -35,7 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           !capitalLetterRegex.hasMatch(password) ||
           !numberRegex.hasMatch(password)) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text('Password must be at least 8 characters, contain a capital letter, a number, and a special character.'),
             backgroundColor: Colors.redAccent,
           ),
@@ -50,7 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(backgroundColor: Colors.green, content: Text('Registration Successful! Please Sign In.')),
+          SnackBar(backgroundColor: Colors.green, content: Text('Registration Successful! Please Sign In.')),
         );
         Navigator.pop(context);
       }
