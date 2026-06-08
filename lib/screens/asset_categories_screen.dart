@@ -105,7 +105,7 @@ class _AssetCategoryScreenState extends State<AssetCategoryScreen> {
     await _storage.writeAssetList(_savedAssets);
     _loadAssetCategories();
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('${assetName.toUpperCase()} removed successfully.')),
+      SnackBar(backgroundColor: Colors.green, content: Text('${assetName.toUpperCase()} removed successfully.')),
     );
   }
 

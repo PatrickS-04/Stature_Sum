@@ -40,14 +40,13 @@ class _AddAmountScreenState extends State<AddAmountScreen> {
       String assetKey = _selectedCategory!.toLowerCase();
       double currentBalance = await _storage.readFloat(assetKey);
       
-      // Update accumulation state value
       double updatedBalance = currentBalance + addedWeight;
       await _storage.writeFloat(assetKey, updatedBalance);
 
       _amountController.clear();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Added R ${addedWeight.toStringAsFixed(2)} to ${_selectedCategory!.toUpperCase()}')),
+          SnackBar(backgroundColor: Colors.green, content: Text('Added R ${addedWeight.toStringAsFixed(2)} to ${_selectedCategory!.toUpperCase()}')),
         );
       }
     }
@@ -56,7 +55,7 @@ class _AddAmountScreenState extends State<AddAmountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent, // Set to transparent
+      backgroundColor: Colors.transparent,
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -65,8 +64,8 @@ class _AddAmountScreenState extends State<AddAmountScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF800020), // Burgundy
-              Color(0xFF2C2C2C), // Charcoal Grey
+              Color(0xFF800020),
+              Color(0xFF2C2C2C),
             ],
           ),
         ),

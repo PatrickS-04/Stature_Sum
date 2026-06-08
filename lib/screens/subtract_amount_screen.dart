@@ -46,7 +46,7 @@ class _SubtractAmountScreenState extends State<SubtractAmountScreen> {
       _amountController.clear();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Subtracted R ${subtractedWeight.toStringAsFixed(2)} from ${_selectedCategory!.toUpperCase()}')),
+          SnackBar(backgroundColor: Colors.green, content: Text('Subtracted R ${subtractedWeight.toStringAsFixed(2)} from ${_selectedCategory!.toUpperCase()}')),
         );
       }
     }

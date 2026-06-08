@@ -50,14 +50,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (inputUsername != savedUsername) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Username not found. Please register.')),
+          const SnackBar(backgroundColor: Colors.redAccent, content: Text('Username not found. Please register.')),
         );
         return;
       }
 
       if (inputPassword != savedPassword) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Incorrect Password. Please try again.')),
+          const SnackBar(backgroundColor: Colors.redAccent, content: Text('Incorrect Password. Please try again.')),
         );
         return;
       }
