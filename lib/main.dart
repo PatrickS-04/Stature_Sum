@@ -16,7 +16,10 @@ class StatureSumApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: false,
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.blue,
+        snackBarTheme: const SnackBarThemeData(
+          behavior: SnackBarBehavior.floating,
+        ),
       ),
       home: const LoginScreen(),
     );
