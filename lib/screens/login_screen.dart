@@ -49,15 +49,17 @@ class _LoginScreenState extends State<LoginScreen> {
       String? savedPassword = await _storage.readString('password');
 
       if (inputUsername != savedUsername) {
+        if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(backgroundColor: Colors.redAccent, content: Text('Username not found. Please register.')),
+          SnackBar(backgroundColor: Colors.redAccent, content: const Text('Username not found. Please register.')),
         );
         return;
       }
 
       if (inputPassword != savedPassword) {
+        if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(backgroundColor: Colors.redAccent, content: Text('Incorrect Password. Please try again.')),
+          SnackBar(backgroundColor: Colors.redAccent, content: const Text('Incorrect Password. Please try again.')),
         );
         return;
       }
