@@ -52,15 +52,37 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (inputUsername != savedUsername) {
         ScaffoldMessenger.of(context)
-          ..hideCurrentSnackBar()
-          ..showSnackBar(SnackBar(backgroundColor: Colors.redAccent, content: const Text('Username not found. Please register.')));
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.redAccent, 
+            behavior: SnackBarBehavior.floating,
+            elevation: 6,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            content: const Text(
+              'Username not found. Please register.',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        );
         return;
       }
 
       if (inputPassword != savedPassword) {
         ScaffoldMessenger.of(context)
-          ..hideCurrentSnackBar()
-          ..showSnackBar(SnackBar(backgroundColor: Colors.redAccent, content: const Text('Incorrect Password. Please try again.')));
+        ..hideCurrentSnackBar()
+        ..showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.redAccent, 
+            behavior: SnackBarBehavior.floating,
+            elevation: 6,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            content: const Text(
+              'Incorrect Password. Please try again.',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        );
         return;
       }
 
